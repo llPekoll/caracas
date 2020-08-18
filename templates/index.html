@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Caracas</title>
+Transactions
+{% if trans %}
+    {% for tran in trans %}
+    <h2>
+        transaction {{loop.index}}
+    </h2>
+        <p>
+            date => {{ tran['date'] }} <br/>
+            amount => {{ tran['amount'] }} <br/>
+            transaction_id => {{ tran['transaction_id'] }} <br/>
+        </p>
+    {% endfor %}
+{% else %}
+  <h1>Caracas</h1>
+{% endif %}
